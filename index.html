@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab 2</title>
+
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+        integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+        crossorigin=""/>
+
+        <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+        integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+        crossorigin=""></script>
+
+    </head>
+
+    <body>
+        <div id="map" style="height: 500px"></div>
+
+        <script type="text/javascript">
+
+          var map = L.map('map', {
+              center: [41.9569,-87.6469],
+              zoom: 12
+          });
+
+          L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+               attribution: '@ <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+               maxZoom: 12,
+               minZoom: 12
+            }).addTo(map);
+
+            var cutleryIcon = L.icon({
+                iconUrl: 'cutlery.png', // url that links to the icon image file
+
+                iconSize:     [38, 38], // size of the icon image in pixels
+                iconAnchor:   [19, 19], // the top left corner of the icon will be aligned so that this point is at the marker's geographical location
+                popupAnchor:  [0, -10] // point from which the popup should open, relative to the iconAnchor
+            });
+
+            var pekingIcon = L.icon({
+                iconUrl: 'peking-duck.png', // url that links to the icon image file
+
+                iconSize:     [38, 38], // size of the icon image in pixels
+                iconAnchor:   [19, 19], // the top left corner of the icon will be aligned so that this point is at the marker's geographical location
+                popupAnchor:  [0, -10] // point from which the popup should open, relative to the iconAnchor
+            });
+
+            var sushiIcon = L.icon({
+                iconUrl: 'sushi.png', // url that links to the icon image file
+
+                iconSize:     [38, 38], // size of the icon image in pixels
+                iconAnchor:   [19, 19], // the top left corner of the icon will be aligned so that this point is at the marker's geographical location
+                popupAnchor:  [0, -10] // point from which the popup should open, relative to the iconAnchor
+            });
+
+            var thaiIcon = L.icon({
+                iconUrl: 'doi-suthep.png', // url that links to the icon image file
+
+                iconSize:     [38, 38], // size of the icon image in pixels
+                iconAnchor:   [19, 19], // the top left corner of the icon will be aligned so that this point is at the marker's geographical location
+                popupAnchor:  [0, -10] // point from which the popup should open, relative to the iconAnchor
+            });
+
+            var beerIcon = L.icon({
+                iconUrl: 'beer.png', // url that links to the icon image file
+
+                iconSize:     [38, 38], // size of the icon image in pixels
+                iconAnchor:   [19, 19], // the top left corner of the icon will be aligned so that this point is at the marker's geographical location
+                popupAnchor:  [0, -10] // point from which the popup should open, relative to the iconAnchor
+            });
+
+            var pizzaIcon = L.icon({
+                iconUrl: 'pizza.png', // url that links to the icon image file
+
+                iconSize:     [38, 38], // size of the icon image in pixels
+                iconAnchor:   [19, 19], // the top left corner of the icon will be aligned so that this point is at the marker's geographical location
+                popupAnchor:  [0, -10] // point from which the popup should open, relative to the iconAnchor
+            });
+
+            var tacoIcon = L.icon({
+                iconUrl: 'taco.png', // url that links to the icon image file
+
+                iconSize:     [38, 38], // size of the icon image in pixels
+                iconAnchor:   [19, 19], // the top left corner of the icon will be aligned so that this point is at the marker's geographical location
+                popupAnchor:  [0, -10] // point from which the popup should open, relative to the iconAnchor
+            });
+
+            var noodleIcon = L.icon({
+                iconUrl: 'noodle.png', // url that links to the icon image file
+
+                iconSize:     [38, 38], // size of the icon image in pixels
+                iconAnchor:   [19, 19], // the top left corner of the icon will be aligned so that this point is at the marker's geographical location
+                popupAnchor:  [0, -10] // point from which the popup should open, relative to the iconAnchor
+            });
+
+            var sandwichIcon = L.icon({
+                iconUrl: 'sandwich.png', // url that links to the icon image file
+
+                iconSize:     [38, 38], // size of the icon image in pixels
+                iconAnchor:   [19, 19], // the top left corner of the icon will be aligned so that this point is at the marker's geographical location
+                popupAnchor:  [0, -10] // point from which the popup should open, relative to the iconAnchor
+            });
+
+            var eggIcon = L.icon({
+                iconUrl: 'egg.png', // url that links to the icon image file
+
+                iconSize:     [38, 38], // size of the icon image in pixels
+                iconAnchor:   [19, 19], // the top left corner of the icon will be aligned so that this point is at the marker's geographical location
+                popupAnchor:  [0, -10] // point from which the popup should open, relative to the iconAnchor
+            });
+
+
+            var marker1 = L.marker([41.97395,-87.65936], {icon: pekingIcon}).addTo(map);
+
+            var marker2 = L.marker([41.99789,-87.66994], {icon: sushiIcon}).addTo(map);
+
+            var marker3 = L.marker([41.97582,-87.66855], {icon: beerIcon}).addTo(map);
+
+            var marker4 = L.marker([41.97575,-87.69219], {icon: pizzaIcon}).addTo(map);
+
+            var marker5 = L.marker([41.90858,-87.67442], {icon: noodleIcon}).addTo(map);
+
+            var marker6 = L.marker([41.97185,-87.67908], {icon: eggIcon}).addTo(map);
+
+            var marker7 = L.marker([41.92359,-87.69814], {icon: beerIcon}).addTo(map);
+
+            var marker8 = L.marker([41.96163,-87.67665], {icon: tacoIcon}).addTo(map);
+
+            var marker9 = L.marker([41.94018,-87.64912], {icon: thaiIcon}).addTo(map);
+
+            var marker10 = L.marker([41.92489,-87.71099], {icon: sandwichIcon}).addTo(map);
+
+            var pic1 = '<img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Sunwahduck.jpg" alt="Sunwahduck" width="250">';
+            var pic2 = '<img src="https://upload.wikimedia.org/wikipedia/commons/c/c6/Hellosushi.jpg" alt="Hellosushi" width="250">';
+            var pic3 = '<img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Hopleaf654.jpg" alt="Hopleaf654" width="250">';
+            var pic4 = '<img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/New_York_Pizza_Slices.png" alt="New_York_Pizza_Slices" width="250">';
+            var pic5 = '<img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Fourbelly2.jpg" alt="Fourbelly2" width="250">';
+            var pic6 = '<img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Overeasy.jpg" alt="Overeasy" width="250">';
+            var pic7 = '<img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Revolution3452.jpg" alt="Revolution3452" width="250">';
+            var pic8 = '<img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Amistad2.jpg" alt="Amistad2" width="250">';
+            var pic9 = '<img src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Krungthep.jpg" alt="Krungthep" width="250">';
+            var pic10 = '<img src="https://upload.wikimedia.org/wikipedia/commons/d/dc/Elhabanero.jpg" alt="Elhabanero" width="250">';
+
+
+            marker1.bindPopup('<p style="color:red; font-weight:bold"> Sun Wah BBQ - 2018 James Beard Award-Winning restaurant, acclaimed for their Beijing Duck</p>' + pic1);
+            marker2.bindPopup('<p style="color:orange; font-weight:bold"> Hello Sushi - Sushi and Thai Cuisine. Excellent selection of authentic Thai Curries.</p>' + pic2);
+            marker3.bindPopup('<p style="color:blue; font-weight:bold"> Hopleaf - Belgian-inspired fare with 68 craft beers on tap. Famous for their Mussels and Frites!</p>' + pic3);
+            marker4.bindPopup('<p style="color:seagreen; font-weight:bold"> Jimmys Pizza Cafe - A slice of New York City hiding in the North Side of Chicago! In addition to the amazing NYC-style pizza by-the-slice or whole pie, the beignets and garlic knots are a must try!</p>' + pic4);
+            marker5.bindPopup('<p style="color:green; font-weight:bold"> Kizuki Ramen & Isakaya - Traditional, authentic Japanese Ramen. Garlic Tonkatsu Shoyu Ramen is the star dish, and available in limited supply daily. </p>' + pic5);
+            marker6.bindPopup('<p style="color:orange; font-weight:bold"> Over Easy Cafe - Very popular brunch destination. Be sure to try the Sassy Eggs! (Pictured Below)</p>' + pic6);
+            marker7.bindPopup('<p style="color:blue; font-weight:bold"> Revolution Brewpub - Brewery and taproom with a variety of Revolution beers on tap to pair with amazing brewpub food selections.</p>' + pic7);
+            marker8.bindPopup('<p style="color:red; font-weight:bold"> La Amistad - Authentic Mexican cuisine with exceptionally fresh ingredients.</p>' + pic8);
+            marker9.bindPopup('<p style="color:blue; font-weight:bold"> Krung Thep - Home of one of the only truly authentic Pad Thai dishes in Chicago.</p>' + pic9);
+            marker10.bindPopup('<p style="color:red; font-weight:bold"> El Habanero - Home of the Pambazo Sandwich. (Pictured Below)</p>' + pic10);
+
+        </script>
+   </body>
+</html>
